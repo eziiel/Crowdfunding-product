@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 const BackersGeral = styled.div`
-
   display: flex;
   flex-direction: column;
   gap: 2rem;

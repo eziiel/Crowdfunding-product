@@ -14,8 +14,24 @@ const BackGround = styled.div`
   align-items: center;
 `
 const Modal = styled.main`
+input[type='radio']{
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #333533;
+  border-radius: 50%;
+  border: 1px solid #949494;
+  :checked {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #f7b500;
+    border: 5px solid #333533;
+  }
+}
+
   width: 700px;
-  height: 500px;
+  /* height: 500px; */
   background:#fff;
   border-radius: 15px;
   display: flex;
@@ -52,34 +68,66 @@ const EscModal = styled.button`
   border-radius: 50%;
 `
 const Options = styled.div `
-  padding: 2rem;
+  opacity: ${props => props.opc};
+  padding: 1rem;
   display: grid;
-  grid-template-columns: 50px repeat(2,1fr) 2fr;
+  grid-template-columns: 30px repeat(3,1fr);
+  gap: 1rem;
   border: 2px solid #f7b500;
   border-radius: 15px;
-`
-const InputRadio = styled.input`
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  background: #333533;
-  border-radius: 50%;
-  border: 1px solid #949494;
-  :checked {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #f7b500;
-    border: 5px solid #333533;
+  h1 {
+    font-size: 1rem;
+    grid-row: 1;
+    grid-column:2;
+  }
+  p {
+    grid-row: 2;
+    grid-column: 2/5;
+    font-size: .875rem;
+  }
+  h2{
+    grid-row: 1;
+    grid-column: 3;
+    font-size: 1rem;
+  };
+  span{
+    font-weight: bold;
+    grid-row: 1;
+    grid-column: 5;
+  };
+  div {
+    border: ${props => props.border} !important;
+  };
+  button {
+    padding: .5rem !important;
+  };
+  input[type="text"]{
+    color: #333533;
+    font-size: 1rem;
+    padding: .5rem;
+    margin-right: 1rem;
+    border-radius: 30px;
+    background: #e4e4e4;
+    border: 1px solid #e4e4e4;
+    :hover, :focus{
+      border: 1px solid #f7b500;
+    }
+  };
+  div {
+    grid-row: 3;
+    grid-column: 1/6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 `
+
+const InputRadio = styled
 
 export { 
   Modal,
   Info,
   Options,
-  InputRadio,
   EscModal,
   BackGround,
-
  }
