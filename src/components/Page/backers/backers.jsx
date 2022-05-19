@@ -7,6 +7,10 @@ import { BackersGeral, DivBk, Span } from './styledBackers'
 const Backers = () => {
   const items = React.useContext(ContextItems)
 
+  const handleModal =() => {
+    items.setOfStatusModal(true)
+  }
+  
 
   return (
     <BackersGeral>
@@ -20,6 +24,7 @@ const Backers = () => {
       <span>left</span>
     </Span>
     <Button 
+    onClick={handleModal}
     des = {items.bambooSimple == 0? "none" : "initial"}
     col="3">Select Reward</Button>
     </DivBk>
@@ -33,6 +38,7 @@ const Backers = () => {
       <span>left</span>
     </Span>
     <Button 
+    onClick={handleModal}
     des = {items.bambooExtends == 0? "none" : "initial"}
     col="3">Select Reward</Button>
     </DivBk>
@@ -46,6 +52,7 @@ const Backers = () => {
       <span>left</span>
     </Span>
     <Button 
+    onClick={handleModal}
     des = {items.bambooPremium == 0? "none" : "initial"}
     col="3">Select Reward</Button>
     </DivBk>

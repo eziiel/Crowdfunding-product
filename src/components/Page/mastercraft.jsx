@@ -2,6 +2,7 @@
 import React from "react"
 import { ContextItems } from "../contextItems/contextStates"
 import {  RangeProgress } from "../inputProgress/ipuntRange"
+import { ModalMaster } from "../modal/modalMaster"
 import { Backers } from "./backers/backers"
 import { Button, ButtonMark, DivStart, DivStartAction, Main, H1, DivStatesGeral, DivStates, States, H1Left, PLeft,PStates } from "./styledMaster"
 
@@ -10,10 +11,18 @@ import { Button, ButtonMark, DivStart, DivStartAction, Main, H1, DivStatesGeral,
 const Mastercraft = () => {
   const [teste, setTeste] = React.useState()
   const items = React.useContext(ContextItems)
+  const refItem = React.useRef()
 
-  // console.log(items.days)
+  
+  React.useEffect(() => {
+    const {left} = refItem.current.getBoundingClientRect()
+    items.setOfSpacingModal(left)
+  },[])
+  
+
   return (
-   <Main>
+   <Main 
+   ref={refItem}>
 
       <DivStart>
         <div>
@@ -65,7 +74,7 @@ const Mastercraft = () => {
           <Backers />
       </DivStart>
 
-
+      {items.statusModal && <ModalMaster/>}
 
 
 

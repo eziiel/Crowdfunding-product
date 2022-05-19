@@ -12,6 +12,8 @@ const ProvideItems = ({children}) => {
   const [bambooSimple,setBambooSimple] = React.useState(101)
   const [bambooExtends,setBambooExtends] = React.useState(64)
   const [bambooPremium,setBambooPremium] = React.useState(0)
+  const [statusModal, setStatusModal] = React.useState(false)
+  const [spacingModal, setSpacingModal] = React.useState(0)
 
   const setOfValue = dataValue => {
     setValue(dataValue)
@@ -28,9 +30,17 @@ const ProvideItems = ({children}) => {
   const setOfBambooPremium = dataBambooPremium => {
     setBambooPremium(dataBambooPremium)
   }
+  const setOfSpacingModal =(dataSpacingModal) => {
+    setSpacingModal(dataSpacingModal)
+  }
+  
+  const setOfStatusModal =(dataStatusModal) => {
+    setStatusModal(dataStatusModal)
+  }
+
   
   const data = {
-    days, total,value,backers,bambooSimple,bambooExtends,bambooPremium,setOfValue,
+    statusModal,setOfStatusModal,spacingModal, days, total,value,backers,bambooSimple,bambooExtends,bambooPremium,setOfValue, setOfSpacingModal,
     setOfBackers,setOfBambooSimple,setOfBambooExtends,setOfBambooPremium
   }
 

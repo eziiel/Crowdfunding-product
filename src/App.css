@@ -7,6 +7,9 @@
   font-family: 'Roboto', sans-serif;
 }
 body {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
   background: #242423 ;
 }
 img {

@@ -3,7 +3,6 @@ import React from 'react'
 import './App.css'
 import { ProvideItems } from './components/contextItems/contextStates'
 import { HeaderMastercraft } from './components/header/header'
-import { ModalMaster } from './components/modal/modalMaster'
 import { Mastercraft } from './components/Page/mastercraft'
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
       <ProvideItems>
         <Mastercraft />
       </ProvideItems>
-      <ModalMaster />
     </>
   )
 }
