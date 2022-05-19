@@ -12,7 +12,7 @@ const Modal = styled.main`
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2rem; 
   padding: 2rem;
 `
 const Info = styled.div`
