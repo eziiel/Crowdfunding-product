@@ -16,10 +16,10 @@ const ProvideItems = ({children}) => {
   const setOfValue = dataValue => {
     setValue(dataValue)
   }
-  const setOfbackers = databackers => {
+  const setOfBackers = databackers => {
     setBackers(databackers)
   }
-  const setOfbambooSimple = dataBambooSimple => {
+  const setOfBambooSimple = dataBambooSimple => {
     setBambooSimple(dataBambooSimple)
   }
   const setOfBambooExtends = dataBambooExtends => {
@@ -31,7 +31,7 @@ const ProvideItems = ({children}) => {
   
   const data = {
     days, total,value,backers,bambooSimple,bambooExtends,bambooPremium,setOfValue,
-    setOfbackers,setOfbambooSimple,setOfBambooExtends,setOfBambooPremium
+    setOfBackers,setOfBambooSimple,setOfBambooExtends,setOfBambooPremium
   }
 
 

@@ -11,7 +11,6 @@ const Main = styled.main`
   flex-direction: column;
   justify-content:space-between;
   color: #333533;
-  
   `
 const DivStart = styled.div`
   border-radius: 10px;
@@ -26,6 +25,17 @@ const DivStart = styled.div`
 const H1 = styled.h1`
   margin-bottom: 1rem;
 `
+const H1Left = styled.div`
+  margin-top: 2rem;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  `
+const PLeft = styled.div`
+  color: #949494;
+  text-align: left;
+  margin-top: 2rem;
+`
 
 const DivStartAction = styled.div`
   display: flex;
@@ -33,14 +43,23 @@ const DivStartAction = styled.div`
   align-items: center;
 `
 const Button = styled.button`
+  pointer-events: ${props => props.des};
+  grid-column: ${props => props.col};
+  justify-self: end;
+  align-self: center;
   border-radius: 30px;
-  padding: .9rem 1.2rem;
+  padding: .9rem .9rem;
   font-size: .875rem;
   font-weight: bold;
   background:#f7b500;
   border: none;
   color: #333533;
   cursor: pointer;
+  :hover{
+    box-shadow: 0 0 1px #daa001;
+    background: #daa001;
+    color: #000;
+  }
 `
 const ButtonMark = styled.button`
   display: flex;
@@ -82,6 +101,11 @@ const States = styled.div`
   padding: 2rem;
   gap: 1rem;
 `
+const PStates = styled.div`
+  color: #949494;
+
+`
+
 
 export {
   Main,
@@ -93,5 +117,8 @@ export {
   DivStatesGeral,
   DivStates,
   States,
-
+  PStates,
+  H1Left,
+  PLeft,
+  
 }
