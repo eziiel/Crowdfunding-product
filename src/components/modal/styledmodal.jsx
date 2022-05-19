@@ -66,15 +66,45 @@ const EscModal = styled.button`
   border: none;
   cursor: pointer;
   border-radius: 50%;
-`
+  `
 const Options = styled.div `
   opacity: ${props => props.opc};
   padding: 1rem;
   display: grid;
-  grid-template-columns: 30px repeat(3,1fr);
   gap: 1rem;
-  border: 2px solid #f7b500;
+  border: 2px solid #949494;
   border-radius: 15px;
+  :hover, :focus{
+    border: 2px solid #f7b500;
+  }
+  button {
+    padding: .5rem !important;
+  };
+  input[type="text"]{
+    display: block;
+    pointer-events: all !important;
+    color: #333533;
+    font-size: 1rem;
+    padding: .5rem;
+    margin-right: 1rem;
+    border-radius: 30px;
+    background: #e4e4e4;
+    border: 1px solid #e4e4e4;
+    :hover, :focus{
+      outline: none;
+      border: 1px solid #f7b500;
+    }
+  };
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  `
+  const Label = styled.label`
+    display: grid;
+    grid-template-columns: 30px, repeat(3,1fr);
+    gap: 1rem;
   h1 {
     font-size: 1rem;
     grid-row: 1;
@@ -95,34 +125,7 @@ const Options = styled.div `
     grid-row: 1;
     grid-column: 5;
   };
-  div {
-    border: ${props => props.border} !important;
-  };
-  button {
-    padding: .5rem !important;
-  };
-  input[type="text"]{
-    color: #333533;
-    font-size: 1rem;
-    padding: .5rem;
-    margin-right: 1rem;
-    border-radius: 30px;
-    background: #e4e4e4;
-    border: 1px solid #e4e4e4;
-    :hover, :focus{
-      border: 1px solid #f7b500;
-    }
-  };
-  div {
-    grid-row: 3;
-    grid-column: 1/6;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-`
-
-const InputRadio = styled
+ `
 
 export { 
   Modal,
@@ -130,4 +133,6 @@ export {
   Options,
   EscModal,
   BackGround,
+  Label,
+
  }

@@ -9,7 +9,6 @@ import { Button, ButtonMark, DivStart, DivStartAction, Main, H1, DivStatesGeral,
 
 
 const Mastercraft = () => {
-  const [teste, setTeste] = React.useState()
   const items = React.useContext(ContextItems)
   const refItem = React.useRef()
 
@@ -76,18 +75,6 @@ const Mastercraft = () => {
 
       {items.statusModal && <ModalMaster/>}
 
-
-
-
-
-      <div>
-      <input type="text" 
-      onChange={({target}) => {
-        setTeste(target.value)}
-      }
-      />
-      <button onClick={() => items.setOfBambooSimple(teste)}>trocar</button>
-      </div>
    </Main>
   )
 }
