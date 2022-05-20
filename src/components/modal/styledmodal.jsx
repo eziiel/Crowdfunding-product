@@ -29,7 +29,6 @@ input[type='radio']{
     border: 5px solid #333533;
   }
 }
-
   width: 700px;
   /* height: 500px; */
   background:#fff;
@@ -39,6 +38,9 @@ input[type='radio']{
   gap: 2rem; 
   padding: 2rem;
   z-index: 5;
+  @media(max-width: 766px) {
+    max-width: 500px;
+  }
 `
 const Info = styled.div`
   text-align: left;

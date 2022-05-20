@@ -11,6 +11,9 @@ const Main = styled.main`
   flex-direction: column;
   justify-content:space-between;
   color: #333533;
+  @media(max-width: 766px) {
+    max-width: 500px;
+  }
   `
 const DivStart = styled.div`
   border-radius: 10px;
