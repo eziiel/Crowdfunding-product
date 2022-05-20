@@ -9,6 +9,7 @@ import { Button, ButtonMark, DivStart, DivStartAction, Main, H1, DivStatesGeral,
 
 
 const Mastercraft = () => {
+  const [teste, setTeste] = React.useState()
   const items = React.useContext(ContextItems)
   const refItem = React.useRef()
 
